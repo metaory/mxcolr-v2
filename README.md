@@ -15,7 +15,7 @@ Usage
 ### every file in `./templates/{tpl}` will be parsed;
 ### scheme variables replaced; and placed in `./out/{tpl}`
 
-![generate](./assets/gifcast_220319143316.gif)
+![generate](https://github.com/metaory/mxcolr-v2/wiki/assets/gifcast_220319173302.gif)
 
 `SBG`, `WBG`, `EBG` are trio of randomely generated colors, they are the core of the palette
 > Given the same `seed`, its guaranteed the same `scheme file` be produced.
