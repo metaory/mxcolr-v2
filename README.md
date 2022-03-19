@@ -1,10 +1,10 @@
 # mxcolr-v2 ꚙ
 
 <p align="center">
-  <img src="./assets/screenshots/2022-01-29-163127_318x127_scrot.png">
+  <img src="./assets/2022-01-29-163127_318x127_scrot.png">
 </p>
 <p align="center">
-  <img src="./assets/screenshots/2022-01-29-190221_2560x1080_scrot.png">
+  <img src="./assets/2022-01-29-190221_2560x1080_scrot.png">
 </p>
 
 Usage
