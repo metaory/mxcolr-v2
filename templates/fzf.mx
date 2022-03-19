@@ -1,0 +1,16 @@
+# $MXNAME @ $MXC_V
+
+export FZF_DEFAULT_OPTS=" \
+  --height ${FZF_HEIGHTS:-100%} \
+  --layout=reverse \
+  --info inline \
+  --no-border \
+  --color=gutter:${WK1} \
+  --color=fg:${C07},bg:${XBG},hl:${WBG} \
+  --color=fg+:${SBG},bg+:${WK1},hl+:${WBX} \
+  --color=info:${EBG},prompt:${C08},pointer:${WBX} \
+  --color=marker:${SBG},spinner:${WBG},header:${WBG}"
+
+
+# FZF_DEFAULT_OPTS='--height 40% --layout=reverse --no-border '
+# export FZF_COLOR_OPTS=" {FZF_DEFAULT_OPTS} \

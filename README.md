@@ -46,7 +46,7 @@ Requirements
 ## this project is the version 2 of [mxcolr](https://github.com/metaory/mxcolr)
 
 ## V2 Roadmap
-- [ ] plugins mechanics
+- [ ] plugin mechanics
 - [ ] interactive mode
 - [ ] snapshots
 - [ ] demos

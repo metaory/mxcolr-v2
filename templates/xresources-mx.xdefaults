@@ -1,3 +1,5 @@
+!  $MXNAME @ $MXC_V
+
 ! # Add this line to your ~/.Xresources ##############
 ! #include "$HOME/.config/mxc/xresources-mx.xdefaults"
 ! ####################################################
@@ -18,12 +20,85 @@
 *.color13:              $C13
 *.color14:              $C14
 *.color15:              $C15
-! *.background:           $XBG
-! *.foreground:           $XFG
-! *.selection_background: $OBG
-! *.selection_foreground: $OFG
-! *.cursor_text_color:    $WFX
-! *.cursor:               $WBX
+*.color20:              $SBG
+*.color21:              $SFG
+*.color30:              $WBG
+*.color31:              $WFG
+*.color40:              $EBG
+*.color41:              $EFG
+*.background:           $XBG
+*.foreground:           $XFG
+*.selection_background: $OBG
+*.selection_foreground: $OFG
+*.cursor_text_color:    $WFX
+*.cursor:               $WBX
 
-*.uno: $UNO
-*.dos: $DOS
+*.c00: $C00
+*.c01: $C01
+*.c02: $C02
+*.c03: $C03
+*.c04: $C04
+*.c05: $C05
+*.c06: $C06
+*.c07: $C07
+*.c08: $C08
+*.c09: $C09
+*.c10: $C10
+*.c11: $C11
+*.c12: $C12
+*.c13: $C13
+*.c14: $C14
+*.c15: $C15
+
+*.wbx: $WBG
+*.wfx: $WFG
+*.sbg: $SBG
+*.sfg: $SFG
+*.wbg: $WBG
+*.wfg: $WFG
+*.ebg: $EBG
+*.efg: $EFG
+*.xbg: $XBG
+*.xfg: $XFG
+*.obg: $OBG
+*.ofg: $OFG
+
+*.cx1: $CX1
+*.cx2: $CX2
+*.cx3: $CX3
+*.cx4: $CX4
+*.cx5: $CX5
+*.cx6: $CX6
+
+*.sk0: $SK0
+*.sk1: $SK1
+*.sk2: $SK2
+*.sk3: $SK3
+*.sk4: $SK4
+*.sk5: $SK5
+*.sk6: $SK6
+*.sk7: $SK7
+*.sk8: $SK8
+*.sk9: $SK9
+
+*.wk0: $WK0
+*.wk1: $WK1
+*.wk2: $WK2
+*.wk3: $WK3
+*.wk4: $WK4
+*.wk5: $WK5
+*.wk6: $WK6
+*.wk7: $WK7
+*.wk8: $WK8
+*.wk9: $WK9
+
+*.ek0: $EK0
+*.ek1: $EK1
+*.ek2: $EK2
+*.ek3: $EK3
+*.ek4: $EK4
+*.ek5: $EK5
+*.ek6: $EK6
+*.ek7: $EK7
+*.ek8: $EK8
+*.ek9: $EK9

@@ -1,0 +1,29 @@
+[mxc]
+; $MXNAME @ $MXC_V
+text               = ${HLXFG}
+subtext            = ${HLC07}
+bg                 = ${HLSK4}
+main               = ${HLSK1}
+sidebar            = ${HLSK0}
+player             = ${HLSK2}
+card               = ${HLSK3}
+
+shadow             = ${HLSK4}
+selected-row       = ${HLC05}
+button             = ${HLEBG}
+button-active      = ${HLWBG}
+button-disabled    = ${HLSK4}
+tab-active         = ${HLSBG}
+
+notification       = ${HLSK2}
+notification-error = ${HLC01}
+misc               = ${HLC02}
+sbg                = ${HLSBG}
+sfg                = ${HLSFG}
+wbx                = ${HLWBX}
+wfx                = ${HLWFX}
+wbg                = ${HLWBG}
+wfg                = ${HLWFG}
+ebg                = ${HLEBG}
+efg                = ${HLEFG}
+                     

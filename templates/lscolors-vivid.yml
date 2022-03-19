@@ -1,0 +1,126 @@
+colors:
+  # $MXNAME @ $MXC_V
+  # Based on "snazzy" theme by sindresorhus
+  
+  mxcbg: '${HLXBG}'
+  mxcfg: '${HLXFG}'
+  mxc01: '${HLC01}'
+  mxc02: '${HLC02}'
+  mxc03: '${HLC03}'
+  mxc04: '${HLC04}'
+  mxc05: '${HLC05}'
+  mxc06: '${HLC06}'
+  mxc09: '${HLC09}'
+  mxc10: '${HLC10}'
+  mxc11: '${HLC11}'
+  mxc12: '${HLC12}'
+  mxc13: '${HLC13}'
+  mxc14: '${HLC14}'
+  mxc07: '${HLC07}'
+  mxc08: '${HLC08}'
+  mxc00: '${HLC00}'
+  mxwbg: '${HLWBG}'
+
+core:
+  normal_text: {}
+  regular_file: {}
+  reset_to_normal: {}
+
+  directory:
+    foreground: mxc04
+
+  symlink:
+    foreground: mxc05
+
+  multi_hard_link: {}
+
+  fifo:
+    foreground: mxc00
+    background: mxc04
+
+  socket:
+    foreground: mxc00
+    background: mxc05
+
+  door:
+    foreground: mxc00
+    background: mxc05
+
+  block_device:
+    foreground: mxc06
+    background: mxc00
+
+  character_device:
+    foreground: mxc05
+    background: mxc00
+
+  broken_symlink:
+    foreground: mxc00
+    background: mxc01
+
+  missing_symlink_target:
+    foreground: mxc00
+    background: mxc01
+
+  setuid: {}
+
+  setgid: {}
+
+  file_with_capability: {}
+
+  sticky_other_writable: {}
+
+  other_writable: {}
+
+  sticky: {}
+
+  executable_file:
+    foreground: mxc01
+    font-style: bold
+
+text:
+  special:
+    foreground: mxcbg
+    background: mxc03
+
+  todo:
+    font-style: bold
+
+  licenses:
+    foreground: mxc07
+
+  configuration:
+    foreground: mxc03
+
+  other:
+    foreground: mxc03
+
+markup:
+  foreground: mxc03
+
+programming:
+  source:
+    foreground: mxc02
+
+  tooling:
+    foreground: mxc02
+
+    continuous-integration:
+      foreground: mxc02
+
+media:
+  foreground: mxc13
+
+office:
+  foreground: mxc01
+
+archives:
+  foreground: mxc06
+  font-style: underline
+
+executable:
+  foreground: mxc01
+  font-style: bold
+
+unimportant:
+  foreground: mxc08
