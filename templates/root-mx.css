@@ -1,0 +1,21 @@
+:root {
+  --mxc-uno: $UNO;
+  --mxc-dos: $DOS;
+
+  --mxc-c00: $C00;
+  --mxc-c01: $C01;
+  --mxc-c02: $C02;
+  --mxc-c03: $C03;
+  --mxc-c04: $C04;
+  --mxc-c05: $C05;
+  --mxc-c06: $C06;
+  --mxc-c07: $C07;
+  --mxc-c08: $C08;
+  --mxc-c09: $C09;
+  --mxc-c10: $C10;
+  --mxc-c11: $C11;
+  --mxc-c12: $C12;
+  --mxc-c13: $C13;
+  --mxc-c14: $C14;
+  --mxc-c15: $C15;
+}

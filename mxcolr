@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -o noclobber  # Avoid overlay files (echo "hi" > foo)
+set -o errexit    # Used to exit upon error, avoiding cascading errors
+set -o pipefail   # Unveils hidden failures
+set -o nounset    # Exposes unset variables
+set -o errtrace   # Trace error LINENO
+
+trap 'echo Error at $LINENO' ERR
+
+_base=$(dirname "$(realpath "$0")")
+
+if ! command -v pastel 2>&1 /dev/null; then
+  echo "pastel not found."
+  echo " ==> https://github.com/sharkdp/pastel#installation"
+  exit 1
+fi
+
+for src in $_base/src/*.sh; do . "$src"; done
+
+main () {
+  generate_seed ${1:-lch_hue}
+  generate_palette
+  generate_shade
+  save
+  demo
+}
+
+main $*
+
