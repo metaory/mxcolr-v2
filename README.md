@@ -38,6 +38,26 @@ XBG # main bg colors
 XFG # main fg colors
 ```
 
+Motivations
+===========
+While tools like Oomox and Spicetify are great in reallity you probably got more than GTK theme and Icons you'd want to patch
+
+Terminal colors, terminal prompt, window manager / status bar theme / icons, Vim/Atom/SourceCode editor and more
+
+Some apps might require to compile and build, all of these are just too repetitive and anoying to do for every change, then there is the never ending search for the right color scheme
+
+What about
+----------
+- [Pywal](https://github.com/dylanaraps/pywal): all about Wallpaper,, great documentation and support though.
+> almost all [pywal-customization](https://github.com/dylanaraps/pywal/wiki/customization) can be easilly added
+- [Oomox](https://github.com/themix-project/oomox) plugins: possible,, to mxcolr, oomox is just another plugin for gtk theme and icon
+
+#### This repo goal is to be a tool for generating and previewing palettes and serve as a framework for patching any application with few keystrokes.
+
+## Not for the faint-hearted
+Only tested on Arch Linux, not advised for beginner users.
+
+
 Requirements
 ------------
 - [pastel](https://github.com/sharkdp/pastel)
