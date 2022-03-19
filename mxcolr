@@ -1,11 +1,11 @@
 #!/bin/bash
 
 ### FLAGS ##############################
-set -o noclobber  # Avoid overlay files (echo "hi" > foo)
-set -o errexit    # Used to exit upon error, avoiding cascading errors
-set -o pipefail   # Unveils hidden failures
-set -o nounset    # Exposes unset variables
-set -o errtrace   # Trace error LINENO
+set -o noclobber # Avoid overlay files
+set -o errexit   # Avoiding cascading errors
+set -o pipefail  # Unveils hidden failures
+set -o nounset   # Exposes unset variables
+set -o errtrace  # Trace error LINENO
 
 trap 'echo Error at $LINENO' ERR
 
