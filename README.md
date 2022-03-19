@@ -17,5 +17,3 @@ Requirements
 
 ## this project is the version 2 of [mxcolr](https://github.com/metaory/mxcolr)
 
-## There is a lite version of this project at [mxcolr-lite](https://github.com/metaory/mxcolr-lite)
-
