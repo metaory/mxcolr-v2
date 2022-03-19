@@ -47,6 +47,7 @@ Requirements
 
 ## V2 Roadmap
 - [ ] plugin mechanics
+- [ ] live preview
 - [ ] interactive mode
 - [ ] snapshots
 - [ ] demos
