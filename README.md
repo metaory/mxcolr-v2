@@ -17,6 +17,9 @@ Usage
 
 ![generate](./assets/gifcast_220319143316.gif)
 
+`SBG`, `WBG`, `EBG` are trio of randomely generated colors, they are the core of the palette
+> Given the same `seed`, its guaranteed the same `scheme file` be produced.
+
 Possible variables available in all templates or plugins are:
 ```bash
 C00 C01 C02 C03 C04 C05 C06 C07 C08 C09 C10 C11 C12 C13 C14 C15
@@ -31,8 +34,8 @@ SK0 SK1 SK2 SK3 SK4 SK5 SK6 SK7 SK8 SK9 # S shades
 WK0 WK1 WK2 WK3 WK4 WK5 WK6 WK7 WK8 WK9 # W shades
 EK0 EK1 EK2 EK3 EK4 EK5 EK6 EK7 EK8 EK9 # E shades
 
-XBG OBG # main bg colors 
-XFG OFG # main fg colors
+XBG # main bg colors
+XFG # main fg colors
 ```
 
 Requirements
@@ -41,4 +44,10 @@ Requirements
 - [GNU bc](https://www.gnu.org/software/bc)
 
 ## this project is the version 2 of [mxcolr](https://github.com/metaory/mxcolr)
+
+## V2 Roadmap
+- [ ] plugins mechanics
+- [ ] interactive mode
+- [ ] snapshots
+- [ ] demos
 
