@@ -2,7 +2,7 @@
 
 ### FLAGS ##############################
 set -o noclobber # Avoid overlay files
-set -o errexit   # Avoiding cascading errors
+set -o errexit   # Avoid cascading errors
 set -o pipefail  # Unveils hidden failures
 set -o nounset   # Exposes unset variables
 set -o errtrace  # Trace error LINENO
