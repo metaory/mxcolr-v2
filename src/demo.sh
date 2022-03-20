@@ -18,7 +18,6 @@ __print_logo () {
 }
 
 __print_head () {
-
   __section $SBG
   __section $WBG
   __section $EBG

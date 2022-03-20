@@ -23,8 +23,8 @@ if ! command -v bc 2>&1 /dev/null; then
 fi
 
 ### SOURCE #############################
-_base_path=$(dirname "$(realpath "$0")")
-for src in $_base_path/src/*.sh; do . "$src"; done
+BASE_PATH=$(dirname "$(realpath "$0")")
+for src in $BASE_PATH/src/*.sh; do . "$src"; done
 
 ### START ##############################
 main () {
