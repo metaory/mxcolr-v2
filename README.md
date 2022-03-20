@@ -54,9 +54,6 @@ What about
 
 #### This repo goal is to be a tool for generating and previewing palettes and serve as a framework for patching any application with few keystrokes.
 
-## Not for the faint-hearted
-Only tested on Arch Linux, not advised for beginner users.
-
 
 Requirements
 ------------
