@@ -33,6 +33,7 @@ main () {
   generate_shade
   save
   demo
+  apply_plugins
 }
 
 main $*

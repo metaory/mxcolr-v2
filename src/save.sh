@@ -8,4 +8,6 @@ save () {
     envsubst < "$file" | tee $out 1>/dev/null
     echo " ::> $out"
   done
+
+  cp out ~/.config/mxc-v2 -rv
 }
