@@ -26,14 +26,20 @@ fi
 BASE_PATH=$(dirname "$(realpath "$0")")
 for src in $BASE_PATH/src/*.sh; do . "$src"; done
 
+
 ### START ##############################
 main () {
   generate_seed ${1:-lch_hue}
   generate_palette
   generate_shade
-  save
   demo
-  apply_plugins
+
+  prompt_menu
+  case $REPLY in
+    n) main ;;
+    u) save; plugins_apply ;;
+    *) demo ;;
+  esac
 }
 
 main $*

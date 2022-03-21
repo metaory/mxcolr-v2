@@ -2,5 +2,5 @@
 
 apply () {
   echo vim apply
-  ls $BASE_PATH/out
+  # ls $BASE_PATH/out
 }

@@ -1,7 +1,6 @@
 #!/bin/bash
 
-
-apply_plugins () {
+plugins_apply () {
   echo apply_plugins
   for plugin in $BASE_PATH/plugins/*.sh; do
     echo plugin $plugin
