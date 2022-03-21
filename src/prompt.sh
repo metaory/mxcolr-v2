@@ -14,4 +14,5 @@ prompt_menu () {
   __print_key next
   __print_key demo
   read -n 1 -r -s
+  echo
 }
