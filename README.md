@@ -41,6 +41,26 @@ EK0 EK1 EK2 EK3 EK4 EK5 EK6 EK7 EK8 EK9 # E shades
 XBG # main bg colors
 XFG # main fg colors
 ```
+Advance Usage
+=============
+if further steps required to patch an app a plugin `sh` file can be added to plugins folder to make the additinal steps
+
+each `sh` file presents in `./plugins` folder is treated as a plugin and is sourced
+
+its expected to follow these patterns:
+* filename: `[0-9]-[a-z_].sh` _eg `1-vim.sh`_
+  * prefix number is the `order` its loaded, 0 means disabled
+  * suffix the `plugin_name`
+* plugin file is expected to have a function named `apply`
+  this function will be called with confirmation prompt
+
+> current active loaded theme variables are available to plugin
+
+> all templates if any are parsed before calling apply_ function
+
+> plugins outputs will first be drafted in `/tmp/mxc` and later upon confirmation prompt moved to `~/.config/mxc-v2/{plugin_name}`
+unless different destination is set
+
 
 Motivations
 ===========
