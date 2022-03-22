@@ -16,7 +16,7 @@ save () {
 
 save_preview_terminal () {
   [[ -n "$TMUX" ]] &&
-    echo preview_tmux; # TODO <<<
+    echo TODO::preview_tmux; # TODO <<<
 
   [[ -n "${ALACRITTY_SOCKET}" ]] &&
     rm ~/.config/mxc-v2/alacritty.yml &&
