@@ -53,7 +53,6 @@ main () {
   generate_palette
   generate_shade
   demo
-  # save
   save_preview_terminal
 
   if (( "$INTERACTIVE" )); then
