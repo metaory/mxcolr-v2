@@ -94,9 +94,9 @@ Requirements
 - [ ] demos
 
 ## Similar projects
-- [xi/xiwal](https://github.com/xi/xiwal) _python_
-- [piutranq/cologen](https://github.com/piutranq/cologen) _rust_
-- [kumux/kumux-colorscheme-engine](https://github.com/kumux/kumux-colorscheme-engine) _javascript_
-- [dylanaraps/pywal](https://github.com/dylanaraps/pywal) _python_
-- [themix-project/oomox](https://github.com/themix-project/oomox) _python_
-- [spicetify/spicetify-cli](https://github.com/spicetify/spicetify-cli) _javascript_
+- [xi/xiwal](https://github.com/xi/xiwal) Generate terminal color schemes -- _python_
+- [piutranq/cologen](https://github.com/piutranq/cologen) The simple color scheme configuration generator, inspired by base16-builder. -- _rust_
+- [kumux/kumux-colorscheme-engine](https://github.com/kumux/kumux-colorscheme-engine) Kumux is the world's first dynamic circadian color scheme for code editors and other software. -- _javascript_
+- [dylanaraps/pywal](https://github.com/dylanaraps/pywal) art Generate and change color-schemes on the fly. -- _python_
+- [themix-project/oomox](https://github.com/themix-project/oomox) Graphical application for generating different color variations of a Materia and Oomox themes -- _python_
+- [spicetify/spicetify-cli](https://github.com/spicetify/spicetify-cli) Commandline tool to customize Spotify client -- _javascript_
