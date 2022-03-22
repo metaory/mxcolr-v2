@@ -9,5 +9,15 @@ save () {
     echo " ::> $out"
   done
 
-  cp out ~/.config/mxc-v2 -rv
+  cp out/* ~/.config/mxc-v2 -fv
+}
+
+save_preview_terminal () {
+  # [[ -n "$TMUX" ]] &&
+  #   . "$MXBASE"/plugins/2-tmux.sh &&
+  #   apply_tmux
+
+  [[ -n "$ALACRITTY_SOCKET" ]] &&
+    rm ~/.config/mxc-v2/alacritty.yml &&
+    envsubst < $BASE_PATH/templates/alacritty.yml > ~/.config/mxc-v2/alacritty.yml
 }

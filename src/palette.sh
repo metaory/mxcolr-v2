@@ -17,9 +17,9 @@ set_saturation () { pastel set hsl-saturation $*; }
 # lightest () { pastel sort-by brightness $* | pastel format hex | tail -n 1; }
 
 generate_seed () {
-  local strategy="$1"
+  echo "STRATEGY = ${STRATEGY}"
 
-  local randoms=( $(pastel random -n 3 | format) )
+  local randoms=( $(pastel random -n 3 -s $STRATEGY | format) )
   declare -g "SBG=${randoms[0]}"
   declare -g "WBG=${randoms[1]}"
   declare -g "EBG=${randoms[2]}"

@@ -10,37 +10,62 @@ set -o errtrace  # Trace error LINENO
 trap 'echo Error at $LINENO' ERR
 
 ### PRE CHECKS #########################
-if ! command -v pastel 2>&1 /dev/null; then
+if ! command -v pastel &> /dev/null; then
   echo "pastel not found."
   echo " ==> https://github.com/sharkdp/pastel#installation"
   exit 1
 fi
 
-if ! command -v bc 2>&1 /dev/null; then
+if ! command -v bc &> /dev/null; then
   echo "bc not found."
   echo " ==> https://www.gnu.org/software/bc"
   exit 1
 fi
+echo ---
+
+### ARGUMENTS ##########################
+usage() { echo "Usage: $0 [-s <vivid|lch>] [-i]" 1>&2; exit 1; }
+
+INTERACTIVE=0
+STRATEGY=vivid
+
+while getopts "is:" o; do
+  case "${o}" in
+    s)
+      STRATEGY=${OPTARG:-vivid}
+      [[ $STRATEGY == "vivid" || $STRATEGY == "lch" ]] || usage
+      [ $STRATEGY == 'lch' ] && STRATEGY=lch_hue
+      ;;
+    i) INTERACTIVE=1 ;;
+    *) STRATEGY=vivid ;;
+  esac
+done
+shift $((OPTIND-1))
 
 ### SOURCE #############################
 BASE_PATH=$(dirname "$(realpath "$0")")
 for src in $BASE_PATH/src/*.sh; do . "$src"; done
 
-
 ### START ##############################
 main () {
-  generate_seed ${1:-lch_hue}
+  generate_seed
   generate_palette
   generate_shade
   demo
+  # save
+  save_preview_terminal
 
-  prompt_menu
-  case $REPLY in
-    n) main ;;
-    u) save; plugins_apply ;;
-    *) demo ;;
-  esac
+  if (( "$INTERACTIVE" )); then
+    prompt_menu
+    case $REPLY in
+      n) main ;;
+      u) save; plugins_apply ;;
+      *) demo ;;
+    esac
+  else
+    prompt_confirm && save && plugins_apply
+  fi
 }
 
-main $*
+main
 

@@ -16,3 +16,15 @@ prompt_menu () {
   read -n 1 -r -s
   echo
 }
+
+prompt_confirm () {
+  pastel paint -n $C07 "Are you sure?"
+  pastel paint -n $SBG " [y/N] "
+  read -n 1 -r -s; echo
+  if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    return 0
+  else
+    echo exiting..
+    exit
+  fi
+}

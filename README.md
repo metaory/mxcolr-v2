@@ -10,12 +10,16 @@
 Usage
 =====
     chmod +x mxcolr
-    mxcolr <strategy> | <vivid, lch_hue> Default is lch_hue
+    mxcolr [-s <vivid|lch>] [-i]
+
+    -s  | (Pastel randomization strategy) default is vivid
+    -i  | interactive mode
 
 ### every file in `./templates/{tpl}` will be parsed;
 ### scheme variables replaced; and placed in `./out/{tpl}`
 
-![generate](https://github.com/metaory/mxcolr-v2/wiki/assets/gifcast_220319173302.gif)
+![generate](https://github.com/metaory/mxcolr-v2/wiki/assets/gifcast_220322103028.gif)
+
 
 `SBG`, `WBG`, `EBG` are trio of randomely generated colors, they are the core of the palette
 > Given the same `seed`, its guaranteed the same `scheme file` be produced.

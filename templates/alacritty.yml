@@ -1,7 +1,7 @@
 #  $MXNAME @ $MXC_V
 colors                :
   primary             :
-    background        : '${XBG}'
+    background        : '${SK2}'
     foreground        : '${XFG}'
     bright_foreground : '${WBG}'
   normal              :
