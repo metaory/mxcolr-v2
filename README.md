@@ -76,7 +76,7 @@ Requirements
 ## Similar projects
 - [xi/xiwal](https://github.com/xi/xiwal) _python_
 - [piutranq/cologen](https://github.com/piutranq/cologen) _rust_
-- [kumux/kumux-colorscheme-engine](https://github.com/kumux/kumux-colorscheme-engine) _mustache_
+- [kumux/kumux-colorscheme-engine](https://github.com/kumux/kumux-colorscheme-engine) _javascript_
 - [dylanaraps/pywal](https://github.com/dylanaraps/pywal) _python_
 - [themix-project/oomox](https://github.com/themix-project/oomox) _python_
 - [spicetify/spicetify-cli](https://github.com/spicetify/spicetify-cli) _javascript_
