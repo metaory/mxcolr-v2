@@ -1,4 +1,6 @@
 #!/bin/bash
+ALACRITTY_SOCKET=${ALACRITTY_SOCKET:-}
+TMUX=${TMUX:-}
 
 save () {
   mkdir out 2> /dev/null || true
@@ -13,9 +15,6 @@ save () {
 }
 
 save_preview_terminal () {
-  local ALACRITTY_SOCKET=${ALACRITTY_SOCKET:-}
-  local TMUX=${TMUX:-}
-
   [[ -n "$TMUX" ]] &&
     preview_tmux
 

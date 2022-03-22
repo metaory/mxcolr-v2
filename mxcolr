@@ -23,11 +23,13 @@ if ! command -v bc &> /dev/null; then
 fi
 echo ---
 
-### ARGUMENTS ##########################
-usage() { echo "Usage: $0 [-s <vivid|lch>] [-i]" 1>&2; exit 1; }
-
+### VARIABLES ##########################
 INTERACTIVE=0
 STRATEGY=vivid
+BASE_PATH=$(dirname "$(realpath "$0")")
+
+### ARGUMENTS ##########################
+usage() { echo "Usage: $0 [-s <vivid|lch>] [-i]" 1>&2; exit 1; }
 
 while getopts "is:" o; do
   case "${o}" in
@@ -43,7 +45,6 @@ done
 shift $((OPTIND-1))
 
 ### SOURCE #############################
-BASE_PATH=$(dirname "$(realpath "$0")")
 for src in $BASE_PATH/src/*.sh; do . "$src"; done
 
 ### START ##############################
