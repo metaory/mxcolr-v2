@@ -13,11 +13,15 @@ save () {
 }
 
 save_preview_terminal () {
-  # [[ -n "$TMUX" ]] &&
-  #   . "$MXBASE"/plugins/2-tmux.sh &&
-  #   apply_tmux
+  local ALACRITTY_SOCKET=${ALACRITTY_SOCKET:-}
+  local TMUX=${TMUX:-}
 
-  [[ -n "$ALACRITTY_SOCKET" ]] &&
+  [[ -n "$TMUX" ]] &&
+    preview_tmux
+
+  [[ -n "${ALACRITTY_SOCKET}" ]] &&
     rm ~/.config/mxc-v2/alacritty.yml &&
     envsubst < $BASE_PATH/templates/alacritty.yml > ~/.config/mxc-v2/alacritty.yml
+
+  return 0
 }
