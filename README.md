@@ -68,8 +68,15 @@ Requirements
 
 ## V2 Roadmap
 - [X] plugin mechanics
-- [ ] live preview
+- [X] live preview* alacritty only
 - [X] interactive mode
 - [ ] snapshots
 - [ ] demos
 
+## Similar projects
+- [xi/xiwal](https://github.com/xi/xiwal)
+- [piutranq/cologen](https://github.com/piutranq/cologen)
+- [kumux/kumux-colorscheme-engine](https://github.com/kumux/kumux-colorscheme-engine)
+- [dylanaraps/pywal](https://github.com/dylanaraps/pywal)
+- [themix-project/oomox](https://github.com/themix-project/oomox)
+- [spicetify/spicetify-cli](https://github.com/spicetify/spicetify-cli)
