@@ -58,6 +58,6 @@ demo () {
   __print_row " " CX{1..6}
   __print_row " " C0{1..6}
   __print_row " " CY{1..6}
-  echo
+  # echo
   for i in {0..9}; do __print_row " " SK${i} WK${i} EK${i}; done
 }
