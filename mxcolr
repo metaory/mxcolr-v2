@@ -52,8 +52,9 @@ main () {
   generate_seed
   generate_palette
   generate_shade
-  demo
+  save
   save_preview_terminal
+  demo
 
   if (( "$INTERACTIVE" )); then
     prompt_menu

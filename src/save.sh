@@ -15,8 +15,12 @@ save () {
 }
 
 save_preview_terminal () {
-  [[ -n "$TMUX" ]] &&
+  # ! [ "$TMUX" ] && echo NOTMUX && return
+  if [ "$TMUX" ]; then
     echo TODO::preview_tmux; # TODO <<<
+    . $BASE_PATH/plugins/tmux.sh
+    apply
+  fi
 
   [[ -n "${ALACRITTY_SOCKET}" ]] &&
     rm ~/.config/mxc-v2/alacritty.yml &&
