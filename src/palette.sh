@@ -49,6 +49,11 @@ generate_palette () {
 
   for x in C{00..15}; do export $x; done
 
+  for s in SBG WBG EBG; do
+    local key="${s:0:1}";
+    declare -g "${key}FG=$(textcolor  "${!s}" | format)"
+  done
+
   for i in {1..6}; do
     local c="C0$i"; c="${!c}"
     declare -g "CX$i=$(saturate   0.30 "$c" | darken  0.02 | format)"
