@@ -22,9 +22,10 @@ save_preview_terminal () {
     apply
   fi
 
-  [[ -n "${ALACRITTY_SOCKET}" ]] &&
-    rm ~/.config/mxc-v2/alacritty.yml &&
+  if [ "${ALACRITTY_SOCKET}" ]; then
+    rm ~/.config/mxc-v2/alacritty.yml
     envsubst < $BASE_PATH/templates/alacritty.yml > ~/.config/mxc-v2/alacritty.yml
+  fi
 
   return 0
 }
