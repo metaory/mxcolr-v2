@@ -7,6 +7,13 @@
   <img src="./assets/2022-01-29-190221_2560x1080_scrot.png">
 </p>
 
+Features
+========
+- Pseudo Random Palette Generation
+- Live terminal preview _currently only for alacritty / tmux_
+- Template parsing and Variable Replacement
+- Plugin mechanics for advance usage
+
 Usage
 =====
     chmod +x mxcolr
