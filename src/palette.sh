@@ -1,4 +1,6 @@
 #!/bin/bash
+MIN_HUE_DISTANCE=40
+ATTMP_WARN_THRESHOLD=7
 
 mix () { pastel mix $*; }
 paint () { pastel paint $*; }
@@ -11,18 +13,45 @@ textcolor () { pastel textcolor $*; }
 set_lightness () { pastel set hsl-lightness $*; }
 set_saturation () { pastel set hsl-saturation $*; }
 
-# diff_real () { echo "df=($1 - $2); if (df < 0) { df=df* -1}; print df" | bc -l; }
+diff_real () { echo "df=($1 - $2); if (df < 0) { df=df* -1}; print df" | bc -l; }
 
 # darkest () { pastel sort-by brightness $* | pastel format hex | head -n 1; }
 # lightest () { pastel sort-by brightness $* | pastel format hex | tail -n 1; }
 
 generate_seed () {
-  echo "STRATEGY = ${STRATEGY}"
+  local attmp="${1:-1}"
+  local redo=0
+  pastel paint -b $WBG "STRATEGY = ${STRATEGY}"
 
   local randoms=( $(pastel random -n 3 -s $STRATEGY | format) )
-  declare -g "SBG=${randoms[0]}"
-  declare -g "WBG=${randoms[1]}"
-  declare -g "EBG=${randoms[2]}"
+  # declare -g "SBG=${randoms[0]}"
+  # declare -g "WBG=${randoms[1]}"
+  # declare -g "EBG=${randoms[2]}"
+
+  local seeds=( SBG WBG EBG )
+  for seed_id in ${!seeds[@]}; do
+    local seed=${seeds[$seed_id]}
+
+    declare -g "$seed=${randoms[$seed_id]}"
+
+    local pre
+    (( seed_id )) &&
+      pre="${seeds[((seed_id - 1))]}" ||
+      pre="${seeds[((${#seeds} - 1))]}"
+
+    local curHue=$(pastel format lch-hue ${!seed})
+    local preHue=$(pastel format lch-hue ${!pre})
+    local diffHue; diffHue=$(diff_real "$curHue" "$preHue")
+    # echo "$pre $seed ::: diffHue $diffHue"
+
+    (( $(echo "$diffHue < $MIN_HUE_DISTANCE" | bc -l) )) && redo=1
+  done
+  if (( redo )); then
+    ! (( attmp % ATTMP_WARN_THRESHOLD )) && prompt_confirm "failed $attmp attempts, still continue?"
+    generate_seed $((++attmp))
+  else
+    pastel paint -b $WBG "generated after $attmp"
+  fi
 }
 
 generate_palette () {

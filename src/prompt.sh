@@ -18,7 +18,8 @@ prompt_menu () {
 }
 
 prompt_confirm () {
-  [[ -n $1 ]] && pastel paint  $WBG "[$1]"
+  local msg=${1:-}
+  [[ -n $msg ]] && pastel paint  $WBG "[$msg]"
   pastel paint -n $C07 "Are you sure?"
   pastel paint -n $SBG " [y/N] "
   read -n 1 -r -s; echo

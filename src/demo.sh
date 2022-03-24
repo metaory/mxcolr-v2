@@ -27,7 +27,6 @@ __print_head () {
   echo -e '\n\n'
 }
 
-
 __print_row () {
   local char=$1
   shift
@@ -41,7 +40,36 @@ __print_row () {
   echo
 }
 
-demo () {
+__demo_format () {
+  local format=${1:-hex}
+  for seed in SBG WBG EBG; do
+    local val=$(pastel format $format ${!seed})
+    local slen=$((7-${#val}))
+    local space=$(printf "%0.s " $(seq 1 "$slen"))
+    pastel paint -b -n "${!seed}" "▏${val}${space}"
+  done
+  pastel paint $C08 "░ ${format}"
+}
+__demo_mxname () {
+  local ulen="${#USER}"
+  local mlen="${#MXNAME}"
+  local vlen="${#MXC_V}"
+
+  local flen=$((ulen+mlen+vlen+6))
+  local space; space=$(printf "%0.s " $(seq 1 "$flen"))
+
+  __fill 3
+  pastel paint -b -o "${SBG}" "$(pastel textcolor "${SBG}")" "$space"
+  __fill 3
+  pastel paint -n -b -o "$SBG" "$SFG" " ${1:-$USER} "
+  pastel paint -n -b -o "$WBG" "$WFG" " $MXNAME "
+  pastel paint -n -b -o "$EBG" "$EFG" " $MXC_V "
+  echo
+  __fill 3
+  pastel paint -b -o "${EBG}" "$(pastel textcolor "${EBG}")" "$space"
+}
+
+demo_full () {
   __print_head
 
   __fill 9;  __print_logo
@@ -58,6 +86,18 @@ demo () {
   __print_row " " CX{1..6}
   __print_row " " C0{1..6}
   __print_row " " CY{1..6}
-  # echo
+
   for i in {0..9}; do __print_row " " SK${i} WK${i} EK${i}; done
+  echo
+}
+
+demo () {
+  echo
+  __fill 4; __demo_format hsl-saturation
+  __fill 4; __demo_format lch-hue
+  __fill 4; __demo_format lch-lightness
+  __fill 4; __demo_format lch-chroma
+  echo
+  __demo_mxname
+  echo
 }

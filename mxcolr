@@ -61,7 +61,7 @@ main () {
     case $REPLY in
       n) main ;;
       u) save; plugins_apply ;;
-      *) demo ;;
+      *) demo_full ;;
     esac
   else
     prompt_confirm && save && plugins_apply
